@@ -29,7 +29,7 @@
 <meta property="og:description" content="大位数乘法乘法 Notice that the number 123456789 is a 9-digit number consisting exactly the numbers from 1 to 9, with no duplication. Double it we will obtain 246913578, which happens to be another 9-digit nu">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-03-05T08:07:23.000Z">
-<meta property="article:modified_time" content="2020-03-05T08:35:11.021Z">
+<meta property="article:modified_time" content="2020-03-06T14:34:10.316Z">
 <meta property="article:author" content="Zcis">
 <meta property="article:tag" content="字符串">
 <meta name="twitter:card" content="summary">
@@ -189,14 +189,62 @@
 </blockquote>
 <blockquote>
 <pre><code>
-#include<stdio.h>
-#include<stdbool.h>
-#include<string.h>
+#include<stdio.h >
+#include<stdbool.h >
+#include<string.h >
+char doubleit(char str[], int x);
+bool ist(char str[], int length);
+char ch = 32;//创建一个可能多出一位的最大的位数的数
+bool ist(char str[],int last)//是否两者的数都互有涵盖
+{
+    int arry[10] = { 0 }, arrys[10] = { 0 };//记得桶排
+    for (int x = 0; x <= last; x++)
+        arry[str[x] - 48] = 1;
+    ch=doubleit(str, last);
+    for (int x = 0; x <= last; x++)
+        arrys[str[x] - 48] = 1;
+    if(ch!=32)
+        arrys[ch - 48] = 1;
+    int flag=1;
+    for (int x = 0; x <= 9; x++)//比较同样记得可以用strcamp（字符串比较时）
+        if (arry[x] != arrys[x])flag = 0;
+    if (flag)
+        return true;//0是false，非0都是true
+    else
+        return false;
+}
+char doubleit(char str[], int last)
+{
+    int x = 0,temp,lastone=0;//lastone用来记录进位,temp作为一个中间值
+    for ( x = last; x>=0 ; x--)//开始乘法
+    {
+        temp = (str[x] - 48) * 2 ;//<strong>取模</strong>
+        str[x] = temp%10 + 48+lastone;
+        lastone = temp / 10;
+        if (x == 0 && lastone != 0)
+            ch = lastone + 48;
+    }
+    return ch;
+}
+</code></pre>
 </blockquote>
-<p>char doubleit(char str[], int x);<br>bool ist(char str[], int length);<br>char ch = 32;//创建一个可能多出一位的最大的位数的数</p>
-<p>bool ist(char str[],int last)//是否两者的数都互有涵盖<br>{<br>    int arry[10] = { 0 }, arrys[10] = { 0 };//记得桶排<br>    for (int x = 0; x &lt;= last; x++)<br>        arry[str[x] - 48] = 1;<br>    ch=doubleit(str, last);<br>    for (int x = 0; x &lt;= last; x++)<br>        arrys[str[x] - 48] = 1;<br>    if(ch!=32)<br>        arrys[ch - 48] = 1;<br>    int flag=1;<br>    for (int x = 0; x &lt;= 9; x++)//比较同样记得可以用strcamp（字符串比较时）<br>        if (arry[x] != arrys[x])flag = 0;<br>    if (flag)<br>        return true;//0是false，非0都是true<br>    else<br>        return false;<br>}</p>
-<p>char doubleit(char str[], int last)<br>{<br>    int x = 0,temp,lastone=0;//lastone用来记录进位,temp作为一个中间值<br>    for ( x = last; x&gt;=0 ; x–)//开始乘法<br>    {<br>        temp = (str[x] - 48) * 2 ;//<strong>取模</strong><br>        str[x] = temp%10 + 48+lastone;<br>        lastone = temp / 10;<br>        if (x == 0 &amp;&amp; lastone != 0)<br>            ch = lastone + 48;<br>    }<br>    return ch;<br>}</p>
-<p>int main()<br>{<br>    char str[22];<br>    int lastnumber;<br>    scanf(“%s”, str);//scanf会自动补’\0’<br>    lastnumber = strlen(str)-1;//strlen不包括’\0’<br>    if (ist(str, lastnumber))printf(“Yes\n”);<br>    else printf(“No\n”);<br>    if (ch != 32)<br>        printf(“%c%s”, ch, str);<br>    else<br>        printf(“%s”, str);<br>    return 0;<br>}</code></pre></p>
+<blockquote>
+<pre><code>
+int main()
+{
+    char str[22];
+    int lastnumber;
+    scanf("%s", str);//scanf会自动补'\0'
+    lastnumber = strlen(str)-1;//strlen不包括'\0'
+    if (ist(str, lastnumber))printf("Yes\n");
+    else printf("No\n");
+    if (ch != 32)
+        printf("%c%s", ch, str);
+    else
+        printf("%s", str);
+    return 0;
+}</code></pre>
+</blockquote>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>大数据做运算用字符串来存放，注意的点<br>1.数据是“倒序存放”，这时就一定注意可能多出来一位，需要再构建一位<br>2.进位问题，有可能是1也有可能是2，所以用<strong>取模</strong>的方法就较为简单<br>3.若有对比问题，flag或者memset都要想到<br>4.同样可以建多数组，将计算结果直接存放在新数列</p>
 
         </div>
@@ -206,7 +254,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2020-03-05T08:35:11.021Z" itemprop="dateUpdated">2020-03-05 16:35:11</time>
+    Last updated: <time datetime="2020-03-06T14:34:10.316Z" itemprop="dateUpdated">2020-03-06 22:34:10</time>
 </span><br>
 
 
@@ -281,7 +329,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2020/03/06/%E6%B4%97%E7%89%8C/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">洗牌</h4>
+      </a>
+    </div>
   
 
   
