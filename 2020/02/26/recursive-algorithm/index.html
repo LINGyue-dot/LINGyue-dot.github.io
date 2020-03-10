@@ -29,7 +29,7 @@
 <meta property="og:description" content="递归方法归纳判断是否为递归问题取决于是否每次执行的是相同的工作起到相同的功能例如汉诺塔中的每次n个碟子移动时，总是需要先将n-1个碟子移到中间碟子中可以用一般式n表示该问题 总结1.结束时的条件2.分析一层递归需要实现的功能3.返回值是如何，传送给上一级的信息 汉诺塔  #include&lt; iostream&gt; using namespace std; void  hanoi(int n, char">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-02-26T09:05:51.000Z">
-<meta property="article:modified_time" content="2020-03-09T13:32:59.930Z">
+<meta property="article:modified_time" content="2020-03-10T03:13:39.059Z">
 <meta property="article:author" content="Zcis">
 <meta property="article:tag" content="数构算法">
 <meta name="twitter:card" content="summary">
@@ -158,7 +158,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#递归"><span class="post-toc-number">1.</span> <span class="post-toc-text">递归</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#方法归纳"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">方法归纳</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#判断是否为递归问题"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">判断是否为递归问题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#总结"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">总结</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#汉诺塔"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">汉诺塔</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#汉诺塔问题分析与总结"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">汉诺塔问题分析与总结</span></a></li></ol></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#递归"><span class="post-toc-number">1.</span> <span class="post-toc-text">递归</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#方法归纳"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">方法归纳</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#判断是否为递归问题"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">判断是否为递归问题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#总结"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">总结</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#汉诺塔"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">汉诺塔</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#汉诺塔问题分析与总结"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">汉诺塔问题分析与总结</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#二分法求数组最大子序列"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">二分法求数组最大子序列</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#总结-1"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">总结</span></a></li></ol></li></ol></li></ol>
         </nav>
     </aside>
 
@@ -219,6 +219,53 @@ int main()
 }</code></pre>
 </blockquote>
 <h3 id="汉诺塔问题分析与总结"><a href="#汉诺塔问题分析与总结" class="headerlink" title="汉诺塔问题分析与总结"></a>汉诺塔问题分析与总结</h3><p>1.&lt; 判断是否递归&gt;模拟汉诺塔移动，因为大的总在小的下面，所以当最大的碟子放在C上时，n-1个在C上，这时可以忽略这个这个最大的碟子，也就是把问题看成n-1个碟子从B柱子移动到C柱子（A为原始柱，B为中间柱，C为目标柱），所以这个是一个递归问题（每次都需要将n-1个碟子送到中间柱子上）<br>2.&lt; 结束操作与条件&gt;<br>分析n-1的终点是什么？必定是只剩一个碟子（这里可以用极限n=1）<br>3.&lt; 每层执行的功能&gt;<br>即执行从A上移动n-1个碟子到B上，再将A最大碟子移动到C上，再将B上n-1个碟子移到C上</p>
+<h2 id="二分法求数组最大子序列"><a href="#二分法求数组最大子序列" class="headerlink" title="二分法求数组最大子序列"></a>二分法求数组最大子序列</h2><blockquote>
+<pre><code>
+#include< iostream>
+#include< cstdlib>//malloc
+using namespace std;
+int Maxnumber(int x, int y, int z)//判断最大的值
+{
+    return x > y ? x > z ? x : z : y > z ? y : z;
+}
+int Max(int arry[], int left, int right)
+{
+    if (left == right)
+        return arry[left];
+    int center = (left + right)/2;
+    int Tempsum=0,Maxleftsum=0,Maxrightsum=0;
+    //求出从中间点向左右衍生的最大子序列值
+    for (int x = center; x >= left; x--)
+    {
+        Tempsum += arry[x];
+        Maxleftsum = Tempsum > Maxleftsum ? Tempsum : Maxleftsum;
+    }
+    Tempsum = 0;
+    for (int x = center + 1; x <= right; x++)
+    {
+        Tempsum += arry[x];
+        Maxrightsum = Tempsum > Maxrightsum ? Tempsum : Maxrightsum;
+    }
+    return Maxnumber(Maxrightsum + Maxleftsum, Max(arry, left, center), Max(arry, center + 1, right));
+    //只需要比较左边最大值，右边最大值和从中间开始的最大值
+}
+int main()
+{
+    int* arry, x,Maxsum=0,Tempsum=0;
+    cin >> x;
+    arry = (int*)malloc(x * sizeof(int));//动态数组
+    for (int y=0; y <= x - 1; y++)
+        cin >> arry[y];
+    Maxsum = Max(arry, 0, x-1);
+    if (Maxsum < 0)
+        cout << 0;
+    else
+        cout << Maxsum; 
+    return 0;
+}
+</code></pre>
+</blockquote>
+<h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><p>1.&lt; 是否为递归&gt;每次都进行二分，都是将总的分为2，再从左边最大值和右边最大值还有中间衍生的最大值这3者中取最大值。<br>2.&lt; 结束条件&gt;二分的结果必定是只剩一个<br>3.&lt; 每次实现功能以及返回信息&gt;算出3者大小，返回最大值</p>
 
         </div>
 
@@ -227,7 +274,7 @@ int main()
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2020-03-09T13:32:59.930Z" itemprop="dateUpdated">2020-03-09 21:32:59</time>
+    Last updated: <time datetime="2020-03-10T03:13:39.059Z" itemprop="dateUpdated">2020-03-10 11:13:39</time>
 </span><br>
 
 
