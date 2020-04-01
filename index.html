@@ -627,23 +627,14 @@ Notice that the number 123456789 is a 9-digit number consisting exactly the numb
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        指针在子母函数的传输
- 
-void shhh(int* x)
-{
-    printf("%d", x);
-}
-void main()
-{
-    int a = 5;
-    int* x =&a;
-    printf("%d\n", x);
-    shhh(x);
-}
+        指针在子母函数作为参数的传输总结1.本质上是在子函数中创建一个新指针指向这个变量，所以在子函数中只能修改变量的值，而不能修改实参指针所指向的变量2.链表中是一样的，如果想在子函数中创建一个新链表必须返回头节点，但是如果只是想修改链表中的值，或者逆转链表，在子函数直接进行即可（在子函数中将头节点指向另外的节点无需返回值就可以逆转链表了）
+&lt;
 
-运行上述程序，所输出结果一致
 
-表面将指针也就是地址传输到子函数中，是修改真正的x而不是子函数新创立的x计算机这时...
+    
+    Document
+
+&l...
     
 
         <a href="/2020/02/29/c%E5%86%85%E5%AD%98%E6%8C%87%E9%92%88/" class="post-more waves-effect waves-button">
