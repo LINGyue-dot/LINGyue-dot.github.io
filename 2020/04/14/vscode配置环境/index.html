@@ -21,15 +21,15 @@
     
     
     <meta name="keywords" content="环境配置">
-    <meta name="description" content="1.vscode 下载c&#x2F;c++ 插件2. Mingw64（https:&#x2F;&#x2F;sourceforge.net&#x2F;projects&#x2F;mingw-w64&#x2F;files&#x2F;） 下载安装（直接下载seh结尾的离线直接解压即可）3.我的电脑属性–高级系统设置–高级–环境变量–系统变量–PATH–新建–Mingw64的bin目录例如D:&#x2F;profession&#x2F;Mingw64&#x2F;bin4.vscode中新建一个路径只有英">
+    <meta name="description" content="c&#x2F;c++ 环境配置1.vscode 下载c&#x2F;c++ 插件2. Mingw64（https:&#x2F;&#x2F;sourceforge.net&#x2F;projects&#x2F;mingw-w64&#x2F;files&#x2F;） 下载安装（直接下载seh结尾的离线直接解压即可）如果要下载在线安装包就得管理员权限运行再科学上网，最后在windows的搜索栏中Mingw64 Install 打开科学上网的下载gcc gdb bin 文件 gcc b">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vscode配置环境">
 <meta property="og:url" content="www.yundingzhishang.xyz/2020/04/14/vscode%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/index.html">
 <meta property="og:site_name" content="The yundingzhishang&#39;s blog">
-<meta property="og:description" content="1.vscode 下载c&#x2F;c++ 插件2. Mingw64（https:&#x2F;&#x2F;sourceforge.net&#x2F;projects&#x2F;mingw-w64&#x2F;files&#x2F;） 下载安装（直接下载seh结尾的离线直接解压即可）3.我的电脑属性–高级系统设置–高级–环境变量–系统变量–PATH–新建–Mingw64的bin目录例如D:&#x2F;profession&#x2F;Mingw64&#x2F;bin4.vscode中新建一个路径只有英">
+<meta property="og:description" content="c&#x2F;c++ 环境配置1.vscode 下载c&#x2F;c++ 插件2. Mingw64（https:&#x2F;&#x2F;sourceforge.net&#x2F;projects&#x2F;mingw-w64&#x2F;files&#x2F;） 下载安装（直接下载seh结尾的离线直接解压即可）如果要下载在线安装包就得管理员权限运行再科学上网，最后在windows的搜索栏中Mingw64 Install 打开科学上网的下载gcc gdb bin 文件 gcc b">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-14T08:40:00.000Z">
-<meta property="article:modified_time" content="2020-04-14T08:56:15.150Z">
+<meta property="article:modified_time" content="2020-04-15T05:05:54.090Z">
 <meta property="article:author" content="Zcis">
 <meta property="article:tag" content="环境配置">
 <meta name="twitter:card" content="summary">
@@ -155,6 +155,13 @@
 
 <div class="container body-wrap">
     
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#c-c-环境配置"><span class="post-toc-number">1.</span> <span class="post-toc-text">c&#x2F;c++ 环境配置</span></a></li></ol>
+        </nav>
+    </aside>
+
 
 <article id="post-vscode配置环境"
   class="post-article article-type-post fade" itemprop="blogPost">
@@ -177,7 +184,15 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <p>1.vscode 下载c/c++ 插件<br>2. Mingw64（<a href="https://sourceforge.net/projects/mingw-w64/files/）" target="_blank" rel="noopener">https://sourceforge.net/projects/mingw-w64/files/）</a> 下载安装（直接下载seh结尾的离线直接解压即可）<br>3.我的电脑属性–高级系统设置–高级–环境变量–系统变量–PATH–新建–Mingw64的bin目录例如D:/profession/Mingw64/bin<br>4.vscode中新建一个路径只有英文的文件夹 .vscode 里面加一个.c文件，随便写一串代码 左边虫子 或者 ctrl shift d  再f5 配置任务选C/C++: gcc.exe build active file<br>5.会自动生成launch.json  tasks.json 注意 launch.json miDebuggerPath 不要错以及launch.json的preLaunchTask和tasks.json的label内容应该是一致的即可</p>
+            <h2 id="c-c-环境配置"><a href="#c-c-环境配置" class="headerlink" title="c/c++ 环境配置"></a>c/c++ 环境配置</h2><p>1.vscode 下载c/c++ 插件<br>2. Mingw64（<a href="https://sourceforge.net/projects/mingw-w64/files/）" target="_blank" rel="noopener">https://sourceforge.net/projects/mingw-w64/files/）</a> 下载安装（直接下载seh结尾的离线直接解压即可）如果要下载在线安装包就得管理员权限运行再科学上网，最后在windows的搜索栏中Mingw64 Install 打开科学上网的下载gcc gdb bin 文件 gcc bin文件和 g++ bin 文件下载安装<br>3.我的电脑属性–高级系统设置–高级–环境变量–系统变量–PATH–新建–Mingw64的bin目录例如D:/profession/Mingw64/bin<br>4.vscode中新建一个路径只有英文的文件夹 .vscode 里面加一个.c文件，随便写一串代码 左边虫子 或者 ctrl shift d  再f5 配置任务选C/C++: gcc.exe build active file<br>5.会自动生成launch.json  tasks.json 注意 launch.json miDebuggerPath 不要错以及launch.json的preLaunchTask和tasks.json的label内容应该是一致的即可</p>
+<p>launch .json 配置文件</p>
+<blockquote>
+<p>{<br>    “version”: “0.2.0”,<br>    “configurations”: [<br>        {<br>            “name”: “(gdb) Launch”,<br>            “preLaunchTask”: “build”,<br>            “type”: “cppdbg”,<br>            “request”: “launch”,<br>            “program”: “${fileDirname}/${fileBasenameNoExtension}.exe”,<br>            “args”: [],<br>            “stopAtEntry”: false,<br>            “cwd”: “${workspaceFolder}”,<br>            “environment”: [],<br>            “externalConsole”: false,//这个控制台，true就打开控制台<br>            “MIMode”: “gdb”,<br>            “miDebuggerPath”: “D:/profession//mingw64/bin/gdb.exe”, // 这里修改GDB路径为安装的mingw64的bin下的gdb.exe路径<br>            “setupCommands”: [<br>                {<br>                    “description”: “Enable pretty-printing for gdb”,<br>                    “text”: “-enable-pretty-printing”,<br>                    “ignoreFailures”: true<br>                }<br>            ]<br>        }]<br>}</p>
+</blockquote>
+<p>tasks.json文件</p>
+<blockquote>
+<p>{<br>    “version”: “2.0.0”,<br>    “tasks”: [<br>        {<br>            “label”: “build”,<br>            “type”: “shell”,<br>            “group”: {<br>                “kind”: “build”,<br>                “isDefault”: true<br>            },<br>            “presentation”: {<br>                “echo”: true,<br>                “reveal”: “always”,<br>                “focus”: false,<br>                “panel”: “shared”<br>            },<br>            “windows”: {<br>                “command”: “g++”,<br>                “args”: [<br>                    “-ggdb”,<br>                    “&quot;${file}&quot;“,<br>                    “–std=c++11”,<br>                    “-o”,<br>                    “&quot;${fileDirname}\${fileBasenameNoExtension}.exe&quot;“<br>                ]<br>            }<br>        }<br>    ]<br>}</p>
+</blockquote>
 
         </div>
 
@@ -186,7 +201,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2020-04-14T08:56:15.150Z" itemprop="dateUpdated">2020-04-14 16:56:15</time>
+    Last updated: <time datetime="2020-04-15T05:05:54.090Z" itemprop="dateUpdated">2020-04-15 13:05:54</time>
 </span><br>
 
 
