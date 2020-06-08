@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>C++代码区域 | The yundingzhishang&#39;s blog | 谢谢你这么关照我</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#77DDFF">
+    
+    
+    <meta name="keywords" content="C++">
+    <meta name="description" content="代码区域  ##### 1  #include&lt; iostream&gt; #include&lt; cassert&gt; using namespace std; class Point { public:     Point() :x(0), y(0) {         cout &lt; &quot;P构造函数&quot; &lt; endl;     }     Point(int x, int y) :x(x), y(y) {">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++代码区域">
+<meta property="og:url" content="www.yundingzhishang.xyz/2020/04/16/C-%E4%BB%A3%E7%A0%81%E5%8C%BA%E5%9F%9F/index.html">
+<meta property="og:site_name" content="The yundingzhishang&#39;s blog">
+<meta property="og:description" content="代码区域  ##### 1  #include&lt; iostream&gt; #include&lt; cassert&gt; using namespace std; class Point { public:     Point() :x(0), y(0) {         cout &lt; &quot;P构造函数&quot; &lt; endl;     }     Point(int x, int y) :x(x), y(y) {">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-04-16T09:53:07.000Z">
+<meta property="article:modified_time" content="2020-06-08T09:58:45.546Z">
+<meta property="article:author" content="Zcis">
+<meta property="article:tag" content="C++">
+<meta name="twitter:card" content="summary">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Zcis</h5>
+          <a href="mailto:1635679571@qq.com" title="1635679571@qq.com" class="mail">1635679571@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/LINGyue-dot" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">C++代码区域</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">C++代码区域</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-04-16T09:53:07.000Z" itemprop="datePublished" class="page-time">
+  2020-04-16
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">语言基础知识</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#代码区域"><span class="post-toc-number">1.</span> <span class="post-toc-text">代码区域</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#小问题区域"><span class="post-toc-number">2.</span> <span class="post-toc-text">小问题区域</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-C-代码区域"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">C++代码区域</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-04-16 17:53:07" datetime="2020-04-16T09:53:07.000Z"  itemprop="datePublished">2020-04-16</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">语言基础知识</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="代码区域"><a href="#代码区域" class="headerlink" title="代码区域"></a>代码区域</h1><pre><code>
+
+##### 1
+
+#include< iostream>
+#include< cassert>
+using namespace std;
+class Point {
+public:
+    Point() :x(0), y(0) {
+        cout << "P构造函数" << endl;
+    }
+    Point(int x, int y) :x(x), y(y) {
+        cout << "P构造函数" << endl;
+    }
+    ~Point(){
+        cout << "P析构函数" << endl;
+    }
+    int getX() const { return x; }
+    int getY() const { return y; }
+    void move(int newx, int newy) {
+        x = newx;
+        y = newy;
+    }
+private:
+    int x, y;
+};
+
+class Arryofpoint {
+public:
+    Arryofpoint(int size) :size(size) {
+        points = new Point[size];//别忘记了new这个
+        cout << "A构造函数" << endl;
+    }
+    ~Arryofpoint(){ 
+        cout << "A析构函数" << endl;
+        delete[]points;
+    }
+    Point& element(int index) {
+        assert(index >= 0 && index < size);
+        return points[index];
+    }
+private:
+    Point* points;
+    int size;
+};
+
+int main()
+{
+    Arryofpoint points(2);
+    points.element(0).move(1, 2);
+    points.element(1).move(11, 22);
+    return 0;
+}
+
+##### 2
+
+#include< iostream>
+using namespace std;
+
+class A
+{
+public:
+    A(int x,int y):real(x),image(y){}
+    void show()const { cout << real << image << endl; }//运算符重载
+    A operator+(const A& c)const;
+private:
+    int real, image;
+};
+
+A A::operator+(const A& c)const {
+    return **A(real + c.real, image + c.image);**
+
+​    注意函数体内是什么
+
+}
+
+int main()
+{
+    A a(1,2);
+    A b(2, 4);
+    a = a + b;
+    a.show();
+    return 0;
+
+}
+
+
+
+##### 3
+
+#include< iostream>
+using namespace std;
+
+class A
+{
+public:
+    A(int x,int y):real(x),image(y){}
+    void show()const { cout << real << image << endl; }//运算符重载
+    friend ostream &operator << (ostream &out, const A& c);
+    friend A operator +(const A& c1, const A& c2);
+private:
+    int real, image;
+};
+
+A operator +(const A& c1, const A& c2)
+{
+    return A(c1.real + c2.real, c1.image + c2.image);
+}
+
+ostream &operator << (ostream &out, const A& c)//<<重载&均不可以少
+{
+    out << "(" << c.real << "," << c.image << ")" << endl;
+    return out;
+}
+
+int main()
+{
+    A a(1,2);
+    A b(2, 4);
+    a = a + b;
+    a.show();
+    cout << a;
+    cout << "asd";
+    return 0;
+}
+
+
+
+##### 4
+
+#include< iostream>
+using namespace std;
+class A
+{
+public:
+    void show() { cout << "1" << endl; }
+
+​    // virtual void show() { cout << "1" << endl; }
+
+};class B:public A
+{
+public:
+    void show() { cout << "2" << endl; }
+
+​    //virtual void  show() { cout << "2" << endl; }**虚函数不是内联的**
+
+};class C: public B
+{
+public:
+    void show() { cout << "3" << endl; }    
+
+​    // virtual  void show() { cout << "3" << endl; }
+
+};
+
+void fun(A* ptr)//必须是老的基类
+{
+    ptr->show();
+}
+
+int main()
+{
+    A a;
+    B b;
+    C c;
+    fun(&a);
+    fun(&b);
+    fun(&c);//这时都只访问A，并没有我们所计划的通过A，B，C访问
+    return 0;
+}
+
+##### 5
+
+
+
+#include< iostream>
+using namespace std;
+class A
+{
+public:
+    virtual void show() = 0;虚函数不是内联的
+};class B:public A
+{
+public:
+    void show() { cout << "2" << endl; }
+};class C: public B
+{
+public:
+    void  show() { cout << "3" << endl; }
+
+​    //void  show() override { cout << "3" << endl; }
+
+};
+
+void fun(A* ptr)//同样可以创建抽象类的指针，只是不能创建对象
+{
+    ptr->show();
+}
+
+int main()
+{
+    B b;
+    C c;
+    fun(&b);
+    fun(&c);//这时都只访问A
+    return 0;
+}
+
+##### 6
+
+#include< iostream>
+#include< cassert>
+using namespace std;
+
+template < typename T>
+class Array
+{
+private:
+    T* p;//指向首地址的指针
+    int size;//数组大小
+public:
+    Array(int size = 50);//构造函数
+    Array(const Array<T>& a);//复制构造函数只读
+    ~Array();//析构
+    Array<T> & operator = (const Array<T> & rhs);//重载赋值运算符
+    //注意函数写法
+    Array<T>& operator[] (int n);//检查【】是否越界
+    operator T*();//*重载//**为什么这里前面不用Array<T>**
+};
+
+template <typename T>Array<T>::Array(int sz)//构造函数
+{
+    if (sz > 0)
+        size = sz;
+    p = new T[size];//分配空间
+}
+
+template <class T>
+Array<T>::~Array()//析构函数
+{
+    delete[]p;
+}
+
+template <typename T>
+Array<T>::Array(const Array<T>& a)
+{
+    size = a.size;
+    p = new T[size];//注意这里必须是深复制
+    for (int x = 0; x < size; x++)
+        p[x] = a.p[x];
+}
+
+template <typename T>
+Array<T>& Array <T>::operator =(const Array<T>& rhs)
+{    //注意函数写法
+    //赋值，意思是个对象已经存在了一段时间后再进行
+    //复制构造是这个对象刚刚创建时候就复制
+    if (rhs != this)//表明复制的和所操作的不是同一个
+    {
+        if (size != rhs.size)
+        {
+            delete[] p;
+            size = rhs.size;
+            p = new T[size];
+        }
+        for (int i = 0; i < size; i++)
+            p[i] = rhs.p[i];//深复制
+    }
+    return *this;//返回当前对象的引用
+}
+
+template<typename T>
+Array<T>& Array<T>::operator[](int n)//设置为引用或者const引用
+{
+    assert(n > 0 && n < size);//检查越界问题 头文件cassert
+    return p[n];
+}
+
+template<typename T>
+Array<T>::operator T*()//对对象直接转换为T*
+{
+    return p;
+}
+
+void read(int* p, int n)
+{
+    for (int i = 0; i < n; i++)
+        cin >> p[i];
+}
+
+int main()
+{
+    Array<int> a(10);
+    //read(a, 10);这里需要*重载,直接将对象转换为指针类型
+    read(a, 10);
+    return 0;
+}
+
+
+
+
+
+
+
+1--5几种排列方式
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</code></pre>
+
+<h1 id="小问题区域"><a href="#小问题区域" class="headerlink" title="小问题区域"></a>小问题区域</h1><p>1.数组int a【5】；a=a+2；错误，这个首地址无法改变 只能a+2访问</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2020-06-08T09:58:45.546Z" itemprop="dateUpdated">2020-06-08 17:58:45</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="www.yundingzhishang.xyz">
+            <img src="/img/avatar.jpg" alt="Zcis">
+            Zcis
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C++</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=www.yundingzhishang.xyz/2020/04/16/C-%E4%BB%A3%E7%A0%81%E5%8C%BA%E5%9F%9F/&title=《C++代码区域》 — The yundingzhishang's blog&pic=www.yundingzhishang.xyz/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=www.yundingzhishang.xyz/2020/04/16/C-%E4%BB%A3%E7%A0%81%E5%8C%BA%E5%9F%9F/&title=《C++代码区域》 — The yundingzhishang's blog&source=平凡，平静，前进" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=www.yundingzhishang.xyz/2020/04/16/C-%E4%BB%A3%E7%A0%81%E5%8C%BA%E5%9F%9F/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《C++代码区域》 — The yundingzhishang's blog&url=www.yundingzhishang.xyz/2020/04/16/C-%E4%BB%A3%E7%A0%81%E5%8C%BA%E5%9F%9F/&via=www.yundingzhishang.xyz" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=www.yundingzhishang.xyz/2020/04/16/C-%E4%BB%A3%E7%A0%81%E5%8C%BA%E5%9F%9F/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2020/05/05/git/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">git</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2020/04/16/C++/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">C++</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Zcis &copy; 2020</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=www.yundingzhishang.xyz/2020/04/16/C-%E4%BB%A3%E7%A0%81%E5%8C%BA%E5%9F%9F/&title=《C++代码区域》 — The yundingzhishang's blog&pic=www.yundingzhishang.xyz/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=www.yundingzhishang.xyz/2020/04/16/C-%E4%BB%A3%E7%A0%81%E5%8C%BA%E5%9F%9F/&title=《C++代码区域》 — The yundingzhishang's blog&source=平凡，平静，前进" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=www.yundingzhishang.xyz/2020/04/16/C-%E4%BB%A3%E7%A0%81%E5%8C%BA%E5%9F%9F/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《C++代码区域》 — The yundingzhishang's blog&url=www.yundingzhishang.xyz/2020/04/16/C-%E4%BB%A3%E7%A0%81%E5%8C%BA%E5%9F%9F/&via=www.yundingzhishang.xyz" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=www.yundingzhishang.xyz/2020/04/16/C-%E4%BB%A3%E7%A0%81%E5%8C%BA%E5%9F%9F/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=www.yundingzhishang.xyz/2020/04/16/C-%E4%BB%A3%E7%A0%81%E5%8C%BA%E5%9F%9F/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '抱歉';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '谢谢你';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
